@@ -7,6 +7,5 @@ public class NodeServer {
   public static void main(String[] args){
 	  Logger logger = LoggerFactory.getLogger(NodeServer.class);
 	  logger.info("node[{}] start ", 1);
-	  
   }
 }
