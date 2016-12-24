@@ -1,0 +1,12 @@
+//
+// the protocol of remoting communication
+//
+// the format of protocol 
+// <magic code> <length> <header length>   <header data>  <body data>
+//    1          2               3             4
+// 协议分5部分，含义分别如下
+//     1、魔法数字
+//     2、大端4个字节整数，等于3、4、5长度总和
+//     3、大端4个字节整数，等于4的长度
+//     4、header 二进制数据
+//     5、应用自定义二进制序列化数据
