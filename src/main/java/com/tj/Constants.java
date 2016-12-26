@@ -1,6 +1,5 @@
 package com.tj;
 
-import java.io.File;
 
 public class Constants {
     /**

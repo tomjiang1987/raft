@@ -4,12 +4,6 @@ import com.alibaba.fastjson.JSON;
 
 import java.nio.charset.Charset;
 
-
-/**
- * the serialization of the Object.<br/>
- * @author tongchuan.lin<linckham@gmail.com>
- * @since 2014/10/17 3:01:22PM
- */
 public abstract class RemotingSerializable {
     public String toJson() {
         return toJson(false);
