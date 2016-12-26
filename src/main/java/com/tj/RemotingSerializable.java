@@ -28,7 +28,7 @@ public abstract class RemotingSerializable {
     public byte[] encode() {
         final String json = this.toJson();
         if (json != null) {
-            return json.getBytes();
+            return json.getBytes(Charset.forName("UTF-8"));
         }
         return null;
     }
@@ -42,12 +42,6 @@ public abstract class RemotingSerializable {
         return null;
     }
 
-    /**
-     * decode the binary data to JAVA Object
-     * @param data the binary data that will being decoded
-     * @param classOfT the JAVA Object that will being convert to.
-     * @return the specified JAVA Object that after decoded
-     */
     public static <T> T decode(final byte[] data, Class<T> classOfT) {
         final String json = new String(data, Charset.forName("UTF-8"));
         return fromJson(json, classOfT);
